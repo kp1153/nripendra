@@ -1,0 +1,138 @@
+import {
+  Sun,
+  Battery,
+  Zap,
+  Shield,
+  Lightbulb,
+  Droplet,
+  Fence,
+} from "lucide-react";
+
+export default function ProductsSection() {
+  const products = [
+    {
+      icon: Sun,
+      title: "ऑनग्रिड सोलर",
+      description:
+        "ग्रिड से जुड़ी सोलर प्रणाली जो बिजली बिल को शून्य कर देती है",
+      features: ["नेट मीटरिंग", "कम लागत", "सरकारी सब्सिडी"],
+    },
+    {
+      icon: Battery,
+      title: "ऑफग्रिड सोलर",
+      description: "बैटरी बैकअप के साथ स्वतंत्र सोलर सिस्टम",
+      features: ["बैटरी स्टोरेज", "24/7 बिजली", "ग्रिड से स्वतंत्र"],
+    },
+    {
+      icon: Zap,
+      title: "हाइब्रिड सोलर",
+      description: "ऑनग्रिड और ऑफग्रिड दोनों का संयोजन",
+      features: ["बैकअप पावर", "नेट मीटरिंग", "बेहतर दक्षता"],
+    },
+    {
+      icon: Fence,
+      title: "सोलर फेंसिंग",
+      description: "सौर ऊर्जा से संचालित सुरक्षा बाड़ प्रणाली",
+      features: ["सुरक्षा", "कम रखरखाव", "पर्यावरण अनुकूल"],
+    },
+    {
+      icon: Lightbulb,
+      title: "सोलर स्ट्रीट लाइट",
+      description: "सड़कों और सार्वजनिक क्षेत्रों के लिए सोलर लाइटिंग",
+      features: ["स्वचालित", "लंबी आयु", "बिजली बिल नहीं"],
+    },
+    {
+      icon: Droplet,
+      title: "सोलर वॉटर हीटर",
+      description: "सौर ऊर्जा से गर्म पानी की व्यवस्था",
+      features: ["ऊर्जा बचत", "पर्यावरण अनुकूल", "कम रखरखाव"],
+    },
+    {
+      icon: Droplet,
+      title: "सोलर वॉटर पंप",
+      description: "खेती और सिंचाई के लिए सोलर पंप",
+      features: ["डीजल बचत", "कम खर्च", "विश्वसनीय"],
+    },
+    {
+      icon: Sun,
+      title: "सोलर होम लाइटिंग",
+      description: "घरेलू उपयोग के लिए छोटे सोलर सिस्टम",
+      features: ["आपातकालीन लाइट", "मोबाइल चार्जिंग", "पोर्टेबल"],
+    },
+  ];
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            हमारे उत्पाद
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            एक छत के नीचे संपूर्ण सोलर समाधान - 1KW से लेकर किसी भी आवश्यकता तक
+          </p>
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow"
+            >
+              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                <product.icon className="h-8 w-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {product.title}
+              </h3>
+              <p className="text-gray-600 mb-4">{product.description}</p>
+              <ul className="space-y-2">
+                {product.features.map((feature, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center text-sm text-gray-700"
+                  >
+                    <span className="text-orange-600 mr-2">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <button className="mt-4 w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition-colors">
+                जानकारी प्राप्त करें
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Other Components Section */}
+        <div className="bg-white rounded-xl p-8 shadow-md">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            अन्य घटक और सामग्री
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="font-semibold text-gray-800">सोलर पैनल</p>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="font-semibold text-gray-800">सोलर इन्वर्टर</p>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="font-semibold text-gray-800">सोलर केबल</p>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="font-semibold text-gray-800">सोलर स्ट्रक्चर</p>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="font-semibold text-gray-800">सोलर ड्रायर</p>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="font-semibold text-gray-800">रॉक लाइट</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
