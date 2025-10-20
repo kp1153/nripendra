@@ -16,7 +16,7 @@ export default function HeroSection() {
     {
       image: "/images/vistara-banner-1.jpg",
       title: "पीएम सूर्य घर मुफ्त बिजली योजना के अंतर्गत",
-      subtitle: "विस्तार प्रीमियम सोलर एजेंसी",
+      subtitle: "विस्तारा प्रीमियम सोलर एजेंसी",
       description: "भारत सरकार एवं UPNEDA द्वारा संचालित",
     },
     {

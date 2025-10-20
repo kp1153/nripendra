@@ -13,7 +13,7 @@ export default function AboutSection() {
             </h2>
             <p className="text-lg text-gray-700 mb-4">
               <span className="font-semibold text-orange-600">
-                विस्तार प्रीमियम सोलर एजेंसी
+                विस्तारा प्रीमियम सोलर एजेंसी
               </span>{" "}
               APN Solar के साथ मिलकर बनारस और आसपास के क्षेत्रों में स्वच्छ और
               नवीकरणीय ऊर्जा समाधान प्रदान कर रही है।

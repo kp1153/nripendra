@@ -4,22 +4,49 @@ import ProductsSection from "../components/ProductsSection";
 import WhySolarSection from "../components/WhySolarSection";
 import ProcessSection from "../components/ProcessSection";
 import FranchiseSection from "../components/FranchiseSection";
-import BusinessIncomeSection from "../components/BusinessIncomeSection";
 import GallerySection from "../components/GallerySection";
 import ContactSection from "../components/ContactSection";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      <HeroSection />
-      <AboutSection />
-      <ProductsSection />
-      <WhySolarSection />
-      <ProcessSection />
-      <FranchiseSection />
-      <BusinessIncomeSection />
-      <GallerySection />
-      <ContactSection />
+      <style>{`
+        html {
+          scroll-behavior: smooth;
+        }
+      `}</style>
+
+      <div id="hero">
+        <HeroSection />
+      </div>
+
+      <div id="about">
+        <AboutSection />
+      </div>
+
+      <div id="products">
+        <ProductsSection />
+      </div>
+
+      <div id="why-solar">
+        <WhySolarSection />
+      </div>
+
+      <div id="process">
+        <ProcessSection />
+      </div>
+
+      <div id="franchise">
+        <FranchiseSection />
+      </div>
+
+      <div id="gallery">
+        <GallerySection />
+      </div>
+
+      <div id="contact">
+        <ContactSection />
+      </div>
     </div>
   );
 }

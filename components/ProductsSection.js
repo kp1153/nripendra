@@ -61,6 +61,20 @@ export default function ProductsSection() {
     },
   ];
 
+  const vendors = [
+    { name: "K Solare", category: "Solar Panels" },
+    { name: "Pahal Solar", category: "PV Modules" },
+    { name: "Goldi Solar", category: "Solar Systems" },
+    { name: "RenewSys", category: "Solar Components" },
+    { name: "Growatt", category: "Inverters" },
+    { name: "Loom Solar", category: "Solar Panels" },
+    { name: "Waaree", category: "Solar Modules" },
+    { name: "Vikram Solar", category: "Solar Solutions" },
+    { name: "Luminous Solar", category: "Power Systems" },
+    { name: "Adani Solar", category: "Solar Panels" },
+    { name: "Jindal Steel & Power", category: "Infrastructure" },
+  ];
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,30 +120,27 @@ export default function ProductsSection() {
           ))}
         </div>
 
-        {/* Other Components Section */}
+        {/* Our Vendors Section */}
         <div className="bg-white rounded-xl p-8 shadow-md">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            अन्य घटक और सामग्री
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            हमारे विश्वसनीय विक्रेता
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold text-gray-800">सोलर पैनल</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold text-gray-800">सोलर इन्वर्टर</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold text-gray-800">सोलर केबल</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold text-gray-800">सोलर स्ट्रक्चर</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold text-gray-800">सोलर ड्रायर</p>
-            </div>
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold text-gray-800">रॉक लाइट</p>
-            </div>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            हम भारत की प्रतिष्ठित सोलर कंपनियों के साथ काम करते हैं जो उच्च
+            गुणवत्ता और विश्वसनीयता के लिए जानी जाती हैं।
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {vendors.map((vendor, index) => (
+              <div
+                key={index}
+                className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 hover:border-orange-600 transition-colors text-center"
+              >
+                <p className="font-semibold text-gray-800 mb-2">
+                  {vendor.name}
+                </p>
+                <p className="text-sm text-gray-600">{vendor.category}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

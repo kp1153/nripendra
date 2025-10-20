@@ -1,36 +1,6 @@
-import {
-  Users,
-  TrendingUp,
-  Award,
-  Briefcase,
-  GraduationCap,
-  Headphones,
-} from "lucide-react";
+import { GraduationCap, Headphones, Briefcase, Users } from "lucide-react";
 
 export default function FranchiseSection() {
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "डायरेक्ट सेल इनकम",
-      description: "15% कमीशन",
-    },
-    {
-      icon: Users,
-      title: "इनडायरेक्ट सेल इनकम",
-      description: "15% कमीशन",
-    },
-    {
-      icon: Briefcase,
-      title: "प्रोडक्ट सेल्स",
-      description: "60% कमीशन",
-    },
-    {
-      icon: Award,
-      title: "AMC इनकम",
-      description: "आजीवन कमाई",
-    },
-  ];
-
   const support = [
     {
       icon: GraduationCap,
@@ -83,33 +53,8 @@ export default function FranchiseSection() {
           </div>
         </div>
 
-        {/* Income Opportunities */}
-        <div className="mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
-            5 तरीकों से व्यवसाय आय
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-orange-600" />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h4>
-                <p className="text-orange-600 font-bold text-lg">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* What You Get */}
-        <div className="bg-gray-50 rounded-xl p-8 mb-12">
+        <div className="bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
             आपको क्या मिलेगा
           </h3>
@@ -133,54 +78,11 @@ export default function FranchiseSection() {
           </div>
         </div>
 
-        {/* Kit Details */}
-        <div className="bg-white border-2 border-orange-600 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            5 kW ऑनग्रिड 1ph सिस्टम DIY किट शामिल
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>545 वाट मोनो हाफ कट पैनल (9 नंबर)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>5 kW ऑनग्रिड इन्वर्टर</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>मॉड्यूल माउंटिंग स्ट्रक्चर</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>DC और AC केबल</span>
-              </li>
-            </ul>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>500 विजिटिंग कार्ड</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>500 प्रोडक्ट ब्रोशर</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>1 पार्टनर सर्टिफिकेट</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 mr-2">✓</span>
-                <span>मार्केटिंग मटेरियल (स्टैंडी, बैनर)</span>
-              </li>
-            </ul>
-          </div>
-          <div className="text-center">
-            <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-              अभी रजिस्टर करें
-            </button>
-          </div>
+        {/* CTA Button */}
+        <div className="mt-12 text-center">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
+            अभी रजिस्टर करें
+          </button>
         </div>
       </div>
     </section>
