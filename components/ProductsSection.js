@@ -62,61 +62,59 @@ export default function ProductsSection() {
   ];
 
   const vendors = [
-    // Solar Panels - Priority Order
     {
       name: "Adani Solar",
-      category: "Solar Panels",
+      logo: "/logos/adani.png",
       colors: { bg: "from-blue-600 to-blue-800" },
     },
     {
       name: "Jindal Steel & Power",
-      category: "Solar Modules",
+      logo: "/logos/jindal.png",
       colors: { bg: "from-orange-500 to-green-600" },
     },
     {
       name: "Luminous Solar",
-      category: "Power Systems",
+      logo: "/logos/luminious.png",
       colors: { bg: "from-blue-600 to-yellow-500" },
     },
     {
       name: "Vikram Solar",
-      category: "Solar Solutions",
+      logo: "/logos/vikram.png",
       colors: { bg: "from-red-600 to-red-800" },
     },
     {
       name: "Waaree",
-      category: "Solar Modules",
+      logo: "/logos/waaree.png",
       colors: { bg: "from-green-600 to-green-800" },
     },
     {
       name: "K Solare",
-      category: "Solar Panels",
+      logo: "/logos/ksolare.png",
       colors: { bg: "from-orange-500 to-yellow-500" },
     },
     {
       name: "Pahal Solar",
-      category: "PV Modules",
+      logo: "/logos/pahal.jpeg",
       colors: { bg: "from-blue-700 to-blue-900" },
     },
     {
       name: "Goldi Solar",
-      category: "Solar Systems",
+      logo: "/logos/goldi.png",
       colors: { bg: "from-blue-800 to-indigo-900" },
     },
     {
       name: "Loom Solar",
-      category: "Solar Panels",
+      logo: "/logos/Loom.png",
       colors: { bg: "from-green-500 to-green-700" },
     },
     {
       name: "RenewSys",
-      category: "Solar Components",
+      logo: "/logos/RenewSys.jpeg",
       colors: { bg: "from-blue-500 to-cyan-600" },
     },
-    // Inverters
     {
       name: "Growatt",
-      category: "Inverters",
+      logo: "/logos/Growatt.png",
       colors: { bg: "from-green-600 to-green-800" },
     },
   ];
@@ -159,9 +157,6 @@ export default function ProductsSection() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-4 w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition-colors">
-                जानकारी प्राप्त करें
-              </button>
             </div>
           ))}
         </div>
@@ -179,12 +174,13 @@ export default function ProductsSection() {
             {vendors.map((vendor, index) => (
               <div
                 key={index}
-                className={`p-6 bg-gradient-to-br ${vendor.colors.bg} rounded-lg shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 text-center`}
+                className={`p-6 bg-gradient-to-br ${vendor.colors.bg} rounded-lg shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 flex items-center justify-center`}
               >
-                <p className="font-bold text-xl text-white mb-2">
-                  {vendor.name}
-                </p>
-                <p className="text-sm text-white/90">{vendor.category}</p>
+                <img
+                  src={vendor.logo}
+                  alt={vendor.name}
+                  className="h-20 w-auto object-contain bg-white rounded px-3 py-2"
+                />
               </div>
             ))}
           </div>
