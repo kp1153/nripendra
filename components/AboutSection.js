@@ -27,16 +27,8 @@ export default function AboutSection() {
             <p className="text-lg text-gray-700 mb-6">
               सोलर प्रौद्योगिकी, इंजीनियरिंग और परियोजना प्रबंधन में विशेषज्ञता
               रखने वाले उत्साही पेशेवरों की टीम द्वारा संचालित, हम एक हरित और
-              अधिक टिकाऊ ग्रह बनाने के लिए समर्पित हैं।
+              अधिक टिकाऊ पृथ्वी बनाने के लिए समर्पित हैं।
             </p>
-            <div className="flex gap-4">
-              <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                संपर्क करें
-              </button>
-              <button className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg font-semibold transition-colors">
-                और जानें
-              </button>
-            </div>
           </div>
 
           {/* Right Image */}
