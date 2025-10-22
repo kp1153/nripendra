@@ -3,8 +3,8 @@ import AboutSection from "../components/AboutSection";
 import ProductsSection from "../components/ProductsSection";
 import WhySolarSection from "../components/WhySolarSection";
 import ProcessSection from "../components/ProcessSection";
-import GallerySection from "../components/GallerySection";
 import ContactSection from "../components/ContactSection";
+import ContactSection from "../components/FranchiseSection;
 
 export default function HomePage() {
   return (
@@ -34,11 +34,10 @@ export default function HomePage() {
       <div id="process">
         <ProcessSection />
       </div>
-
-
-      <div id="gallery">
-        <GallerySection />
+        <div id="franchise">
+        <FranchiseSection />
       </div>
+      
 
       <div id="contact">
         <ContactSection />
