@@ -62,17 +62,63 @@ export default function ProductsSection() {
   ];
 
   const vendors = [
-    { name: "K Solare", category: "Solar Panels" },
-    { name: "Pahal Solar", category: "PV Modules" },
-    { name: "Goldi Solar", category: "Solar Systems" },
-    { name: "RenewSys", category: "Solar Components" },
-    { name: "Growatt", category: "Inverters" },
-    { name: "Loom Solar", category: "Solar Panels" },
-    { name: "Waaree", category: "Solar Modules" },
-    { name: "Vikram Solar", category: "Solar Solutions" },
-    { name: "Luminous Solar", category: "Power Systems" },
-    { name: "Adani Solar", category: "Solar Panels" },
-    { name: "Jindal Steel & Power", category: "Infrastructure" },
+    // Solar Panels - Priority Order
+    {
+      name: "Adani Solar",
+      category: "Solar Panels",
+      colors: { bg: "from-blue-600 to-blue-800" },
+    },
+    {
+      name: "Jindal Steel & Power",
+      category: "Solar Modules",
+      colors: { bg: "from-orange-500 to-green-600" },
+    },
+    {
+      name: "Luminous Solar",
+      category: "Power Systems",
+      colors: { bg: "from-blue-600 to-yellow-500" },
+    },
+    {
+      name: "Vikram Solar",
+      category: "Solar Solutions",
+      colors: { bg: "from-red-600 to-red-800" },
+    },
+    {
+      name: "Waaree",
+      category: "Solar Modules",
+      colors: { bg: "from-green-600 to-green-800" },
+    },
+    {
+      name: "K Solare",
+      category: "Solar Panels",
+      colors: { bg: "from-orange-500 to-yellow-500" },
+    },
+    {
+      name: "Pahal Solar",
+      category: "PV Modules",
+      colors: { bg: "from-blue-700 to-blue-900" },
+    },
+    {
+      name: "Goldi Solar",
+      category: "Solar Systems",
+      colors: { bg: "from-blue-800 to-indigo-900" },
+    },
+    {
+      name: "Loom Solar",
+      category: "Solar Panels",
+      colors: { bg: "from-green-500 to-green-700" },
+    },
+    {
+      name: "RenewSys",
+      category: "Solar Components",
+      colors: { bg: "from-blue-500 to-cyan-600" },
+    },
+    // Inverters
+    {
+      name: "Growatt",
+      category: "Inverters",
+      colors: { bg: "from-green-600 to-green-800" },
+    },
   ];
 
   return (
@@ -133,12 +179,12 @@ export default function ProductsSection() {
             {vendors.map((vendor, index) => (
               <div
                 key={index}
-                className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 hover:border-orange-600 transition-colors text-center"
+                className={`p-6 bg-gradient-to-br ${vendor.colors.bg} rounded-lg shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 text-center`}
               >
-                <p className="font-semibold text-gray-800 mb-2">
+                <p className="font-bold text-xl text-white mb-2">
                   {vendor.name}
                 </p>
-                <p className="text-sm text-gray-600">{vendor.category}</p>
+                <p className="text-sm text-white/90">{vendor.category}</p>
               </div>
             ))}
           </div>
