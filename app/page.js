@@ -4,7 +4,7 @@ import ProductsSection from "../components/ProductsSection";
 import WhySolarSection from "../components/WhySolarSection";
 import ProcessSection from "../components/ProcessSection";
 import ContactSection from "../components/ContactSection";
-import ContactSection from "../components/FranchiseSection;
+import ContactSection from "../components/FranchiseSection";
 
 export default function HomePage() {
   return (
