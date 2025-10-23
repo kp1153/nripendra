@@ -95,29 +95,29 @@ export default function HeroSection() {
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sun className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">25 साल की वारंटी</h3>
-              <p className="text-gray-600">उच्च गुणवत्ता वाले सोलर पैनल</p>
+              <h3 className="text-2xl font-bold mb-2 text-blue-700">25 साल की वारंटी</h3>
+              <p className="text-lg font-semibold text-blue-600">उच्च गुणवत्ता वाले सोलर पैनल</p>
             </div>
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">सरकारी सब्सिडी</h3>
-              <p className="text-gray-600">PM सूर्य घर योजना के तहत</p>
+              <h3 className="text-2xl font-bold mb-2 text-blue-700">सरकारी सब्सिडी</h3>
+              <p className="text-lg font-semibold text-blue-600">PM सूर्य घर योजना के तहत</p>
             </div>
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">विशेषज्ञ टीम</h3>
-              <p className="text-gray-600">अनुभवी इंस्टॉलेशन सेवा</p>
+              <h3 className="text-2xl font-bold mb-2 text-blue-700">विशेषज्ञ टीम</h3>
+              <p className="text-lg font-semibold text-blue-600">अनुभवी इंस्टॉलेशन सेवा</p>
             </div>
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">प्रमाणित कंपनी</h3>
-              <p className="text-gray-600">ISO & BIS certified</p>
+              <h3 className="text-2xl font-bold mb-2 text-blue-700">प्रमाणित कंपनी</h3>
+              <p className="text-lg font-semibold text-blue-600">ISO & BIS certified</p>
             </div>
           </div>
         </div>
