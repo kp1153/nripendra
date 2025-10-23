@@ -3,18 +3,6 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h3 className="text-white text-xl font-bold mb-4">
-            विस्तारा प्रीमियम सोलर एजेंसी
-          </h3>
-          <p className="text-sm">
-            बनारस और आसपास के क्षेत्रों में सोलर ऊर्जा समाधान का विश्वसनीय नाम
-          </p>
-        </div>
-      </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
