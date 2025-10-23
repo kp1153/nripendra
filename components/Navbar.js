@@ -116,43 +116,17 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="relative group">
-            <button className="text-gray-700 hover:text-orange-600 font-medium flex items-center">
-              फ्रेंचाइजी <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
-            <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <button
-                onClick={() => scrollToSection("franchise")}
-                className="w-full text-left px-4 py-2 text-orange-500 hover:bg-orange-50 font-medium border-l-4 border-orange-500"
-              >
-                मास्टर प्रीमियम फ्रेंचाइजी
-              </button>
-              <button
-                onClick={() => scrollToSection("process")}
-                className="w-full text-left px-4 py-2 text-green-600 hover:bg-green-50 font-medium border-l-4 border-green-600"
-              >
-                कंपनी प्रक्रिया
-              </button>
-              <button
-                onClick={() => scrollToSection("franchise")}
-                className="w-full text-left px-4 py-2 text-blue-600 hover:bg-blue-50 font-medium border-l-4 border-blue-600"
-              >
-                प्रशिक्षण और सहायता
-              </button>
-            </div>
-          </div>
-
+          <button
+            onClick={() => scrollToSection("franchise")}
+            className="text-gray-700 hover:text-orange-600 font-medium"
+          >
+            फ्रेंचाइजी
+          </button>
           <button
             onClick={() => scrollToSection("why-solar")}
             className="text-gray-700 hover:text-orange-600 font-medium"
           >
             सोलर बिजनेस क्यों
-          </button>
-          <button
-            onClick={() => scrollToSection("gallery")}
-            className="text-gray-700 hover:text-orange-600 font-medium"
-          >
-            गैलरी
           </button>
           <button
             onClick={() => scrollToSection("contact")}
@@ -194,12 +168,6 @@ export default function Navbar() {
               className="block w-full text-left py-2 text-gray-700 hover:text-orange-600"
             >
               सोलर बिजनेस क्यों
-            </button>
-            <button
-              onClick={() => scrollToSection("gallery")}
-              className="block w-full text-left py-2 text-gray-700 hover:text-orange-600"
-            >
-              गैलरी
             </button>
             <button
               onClick={() => scrollToSection("contact")}
