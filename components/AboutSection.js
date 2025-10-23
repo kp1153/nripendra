@@ -1,4 +1,4 @@
-import { Shield, Award, Users, TrendingUp } from "lucide-react";
+import { Shield, Award, Users, TrendingUp, Wrench } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -82,38 +82,36 @@ export default function AboutSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-orange-600" />
+              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-10 w-10 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-lg mb-2">
+              <h4 className="font-semibold text-base">
                 डिज़ाइन और इंजीनियरिंग
               </h4>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-orange-600" />
+              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="h-10 w-10 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-lg mb-2">परियोजना प्रबंधन</h4>
+              <h4 className="font-semibold text-base">परियोजना प्रबंधन</h4>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-orange-600" />
+              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-10 w-10 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-lg mb-2">सामग्री की आपूर्ति</h4>
+              <h4 className="font-semibold text-base">सामग्री की आपूर्ति</h4>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-orange-600" />
+              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wrench className="h-10 w-10 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-lg mb-2">
-                निर्माण और कमीशनिंग
-              </h4>
+              <h4 className="font-semibold text-base">निर्माण और कमीशनिंग</h4>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-orange-600" />
+              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-10 w-10 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-lg mb-2">संचालन और रखरखाव</h4>
+              <h4 className="font-semibold text-base">संचालन और रखरखाव</h4>
             </div>
           </div>
         </div>
