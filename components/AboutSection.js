@@ -53,22 +53,22 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Shield className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-lg mb-2">ISO Certified</h4>
-              <p className="text-gray-600 text-sm">
+              <h4 className="font-bold text-xl mb-2 text-blue-700">ISO Certified</h4>
+              <p className="text-blue-600 text-base font-semibold">
                 ISO 9001:2015, ISO 45001:2018, ISO 14001:2015
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Award className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-lg mb-2">OEM Certified</h4>
-              <p className="text-gray-600 text-sm">
+              <h4 className="font-bold text-xl mb-2 text-blue-700">OEM Certified</h4>
+              <p className="text-blue-600 text-base font-semibold">
                 TUV-Rhineland & BIS Certified Manufacturer
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Award className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-lg mb-2">पुरस्कार विजेता</h4>
-              <p className="text-gray-600 text-sm">
+              <h4 className="font-bold text-xl mb-2 text-blue-700">पुरस्कार विजेता</h4>
+              <p className="text-blue-600 text-base font-semibold">
                 भारत में पुरस्कार विजेता मान्यता
               </p>
             </div>
