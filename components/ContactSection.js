@@ -21,7 +21,7 @@ export default function ContactSection() {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* पता */}
+              {/* पहला पता */}
               <div className="flex items-start">
                 <div className="bg-orange-100 p-3 rounded-lg mr-4">
                   <MapPin className="h-6 w-6 text-orange-600" />
@@ -31,7 +31,24 @@ export default function ContactSection() {
                   <p className="text-gray-600">
                     NH-56, बाबतपुर एयरपोर्ट रोड
                     <br />
-                    (इंडिया बाबा इंटर कॉलेज)
+                    (उड़िया बाबा इंटर कॉलेज)
+                    <br />
+                    बैजलपट्टी, हरहुआ, वाराणसी
+                  </p>
+                </div>
+              </div>
+
+              {/* दूसरा पता */}
+              <div className="flex items-start mt-4">
+                <div className="bg-orange-100 p-3 rounded-lg mr-4">
+                  <MapPin className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">पता</h4>
+                  <p className="text-gray-600">
+                    NH-56, बाबतपुर एयरपोर्ट रोड
+                    <br />
+                    (पिलर नंबर 25 के सामने)
                     <br />
                     बैजलपट्टी, हरहुआ, वाराणसी
                   </p>
