@@ -1,174 +1,160 @@
-export default function FranchiseSection() {
+"use client";
+import { ChevronDown } from "lucide-react";
+
+export default function Navbar() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="py-16 bg-gradient-to-br from-orange-50 to-orange-100">
+    <nav className="bg-white shadow-md w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            हमारे साथ जुड़ें
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            अगर आप सोलर उद्योग में अवसर तलाश रहे हैं, तो हमारे साथ पार्टनरशिप करें। हम अपने पार्टनर्स को पूर्ण समर्थन और मार्गदर्शन प्रदान करते हैं।
+        {/* Logo Section - Center */}
+        <div className="flex flex-col items-center py-6 text-center">
+          {/* Slider Text - Pink & Bold */}
+          <div className="w-full overflow-hidden mb-3">
+            <style jsx>{`
+              @keyframes slide {
+                0% {
+                  transform: translateX(100%);
+                }
+                100% {
+                  transform: translateX(-100%);
+                }
+              }
+              .animate-slide {
+                display: inline-block;
+                animation: slide 15s linear infinite;
+              }
+            `}</style>
+            <div className="whitespace-nowrap">
+              <span className="text-pink-600 font-bold text-base md:text-lg animate-slide">
+                विस्तारा प्रीमियम सोलर एजेंसी आपका स्वागत करती है
+              </span>
+            </div>
+          </div>
+
+          {/* Logo with 3D Effect */}
+          <img
+            src="/logo.jpeg"
+            alt="Logo"
+            className="h-20 w-20 object-contain mb-3 transition-all duration-300 hover:scale-110 hover:rotate-6"
+            style={{
+              filter:
+                "drop-shadow(0 4px 6px rgba(234, 179, 8, 0.4)) drop-shadow(0 10px 15px rgba(234, 179, 8, 0.3))",
+            }}
+          />
+
+          {/* Agency Name - Golden Color (Hindi & English) */}
+          <h1 className="text-2xl md:text-3xl font-bold text-yellow-600 mb-1">
+            विस्तारा प्रीमियम सोलर एजेंसी
+          </h1>
+          <p className="text-sm md:text-base text-yellow-600 font-semibold">
+            Vistara Premium Solar Agency
           </p>
         </div>
 
-        {/* Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-            <div className="bg-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-3xl">🎓</span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              व्यापक प्रशिक्षण
-            </h3>
-            <p className="text-gray-600">
-              तकनीकी और व्यावसायिक प्रशिक्षण के साथ आपको सफलता के लिए तैयार करते हैं
-            </p>
-          </div>
+        {/* Menu - Mobile First (No Hamburger) */}
+        <div className="flex flex-wrap justify-center gap-3 md:gap-6 pb-6">
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="text-blue-600 hover:text-blue-800 font-semibold text-sm md:text-lg"
+          >
+            होम
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className="text-green-600 hover:text-green-800 font-semibold text-sm md:text-lg"
+          >
+            हमारे बारे में
+          </button>
 
-          <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-            <div className="bg-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-3xl">🤝</span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              पूर्ण सहायता
-            </h3>
-            <p className="text-gray-600">
-              मार्केटिंग सामग्री और समर्पित सपोर्ट टीम के साथ आपका साथ
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-            <div className="bg-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-3xl">📈</span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              विकास का अवसर
-            </h3>
-            <p className="text-gray-600">
-              तेजी से बढ़ते सोलर उद्योग में अपना व्यवसाय स्थापित करें
-            </p>
-          </div>
-        </div>
-
-        {/* Process Steps */}
-        <div className="bg-white rounded-xl p-8 shadow-lg mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">
-            पार्टनरशिप प्रक्रिया
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Step 1 */}
-            <div className="relative bg-gray-50 rounded-xl p-6">
-              <div className="absolute -top-4 -left-4 bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                1
-              </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  प्रारंभिक संपर्क
-                </h4>
-                <p className="text-gray-600">
-                  हमारे विशेषज्ञ से बात करें और अपनी रुचि व्यक्त करें
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative bg-gray-50 rounded-xl p-6">
-              <div className="absolute -top-4 -left-4 bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                2
-              </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  पंजीकरण
-                </h4>
-                <p className="text-gray-600">
-                  आधिकारिक पार्टनर के रूप में पंजीकरण करें
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="relative bg-gray-50 rounded-xl p-6">
-              <div className="absolute -top-4 -left-4 bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                3
-              </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  प्रशिक्षण प्राप्त करें
-                </h4>
-                <p className="text-gray-600">
-                  व्यापक तकनीकी और व्यावसायिक प्रशिक्षण
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="relative bg-gray-50 rounded-xl p-6">
-              <div className="absolute -top-4 -left-4 bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                4
-              </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  मार्केटिंग सामग्री
-                </h4>
-                <p className="text-gray-600">
-                  प्रचार के लिए सभी आवश्यक सामग्री प्राप्त करें
-                </p>
-              </div>
-            </div>
-
-            {/* Step 5 */}
-            <div className="relative bg-gray-50 rounded-xl p-6">
-              <div className="absolute -top-4 -left-4 bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                5
-              </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  समर्पित सहायता
-                </h4>
-                <p className="text-gray-600">
-                  आपकी यात्रा में निरंतर मार्गदर्शन और सहायता
-                </p>
-              </div>
-            </div>
-
-            {/* Step 6 */}
-            <div className="relative bg-gray-50 rounded-xl p-6">
-              <div className="absolute -top-4 -left-4 bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                6
-              </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  व्यवसाय शुरू करें
-                </h4>
-                <p className="text-gray-600">
-                  सफल पार्टनर के रूप में अपनी यात्रा आरंभ करें
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <p className="text-xl text-gray-700 mb-6">
-            रुचि रखते हैं? आज ही संपर्क करें!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918787037469">
-              <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                फोन करें
+          {/* Products Dropdown */}
+          <div className="relative group">
+            <button className="text-purple-600 hover:text-purple-800 font-semibold text-sm md:text-lg flex items-center">
+              उत्पाद <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-orange-500 hover:bg-orange-50 font-medium border-l-4 border-orange-500"
+              >
+                ऑनग्रिड सोलर
               </button>
-            </a>
-            <a href="mailto:dr.nripendra.nns@gmail.com">
-              <button className="bg-white border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                ईमेल करें
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-green-600 hover:bg-green-50 font-medium border-l-4 border-green-600"
+              >
+                ऑफग्रिड सोलर
               </button>
-            </a>
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-blue-600 hover:bg-blue-50 font-medium border-l-4 border-blue-600"
+              >
+                हाइब्रिड सोलर
+              </button>
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-orange-500 hover:bg-orange-50 font-medium border-l-4 border-orange-500"
+              >
+                सोलर फेंसिंग
+              </button>
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-green-600 hover:bg-green-50 font-medium border-l-4 border-green-600"
+              >
+                सोलर स्ट्रीट लाइट
+              </button>
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-blue-600 hover:bg-blue-50 font-medium border-l-4 border-blue-600"
+              >
+                सोलर वॉटर हीटर
+              </button>
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-orange-500 hover:bg-orange-50 font-medium border-l-4 border-orange-500"
+              >
+                सोलर वॉटर पंप
+              </button>
+              <button
+                onClick={() => scrollToSection("products")}
+                className="w-full text-left px-4 py-2 text-green-600 hover:bg-green-50 font-medium border-l-4 border-green-600"
+              >
+                अन्य उत्पाद
+              </button>
+            </div>
           </div>
+
+          <button
+            onClick={() => scrollToSection("gallery")}
+            className="text-orange-600 hover:text-orange-800 font-semibold text-sm md:text-lg"
+          >
+            गैलरी
+          </button>
+          <button
+            onClick={() => scrollToSection("franchise")}
+            className="text-red-600 hover:text-red-800 font-semibold text-sm md:text-lg"
+          >
+            फ्रेंचाइजी
+          </button>
+          <button
+            onClick={() => scrollToSection("why-solar")}
+            className="text-indigo-600 hover:text-indigo-800 font-semibold text-sm md:text-lg"
+          >
+            सोलर बिजनेस क्यों
+          </button>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="text-teal-600 hover:text-teal-800 font-semibold text-sm md:text-lg"
+          >
+            संपर्क करें
+          </button>
         </div>
       </div>
-    </section>
+    </nav>
   );
 }
