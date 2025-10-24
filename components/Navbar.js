@@ -1,62 +1,94 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
     }
   };
 
   return (
     <nav className="bg-white shadow-md w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Logo Section - Center */}
+        {/* Sliding Banner - Pink */}
+        <div
+          className="overflow-hidden py-3"
+          style={{ backgroundColor: "#EC4899" }}
+        >
+          <div className="animate-marquee whitespace-nowrap">
+            <span className="text-white font-semibold text-base md:text-lg mx-4">
+              विस्तारा प्रीमियम सोलर एजेंसी आपका स्वागत करती है
+            </span>
+            <span className="text-white font-semibold text-base md:text-lg mx-4">
+              विस्तारा प्रीमियम सोलर एजेंसी आपका स्वागत करती है
+            </span>
+            <span className="text-white font-semibold text-base md:text-lg mx-4">
+              विस्तारा प्रीमियम सोलर एजेंसी आपका स्वागत करती है
+            </span>
+          </div>
+        </div>
+
+        {/* Logo Section - Center with 3D Effect */}
         <div className="flex flex-col items-center py-6 text-center">
-          <img
-            src="/logo.jpeg"
-            alt="Logo"
-            className="h-20 w-20 object-contain mb-3"
-          />
-          <h1 className="text-2xl md:text-3xl font-bold text-amber-600 mb-1">
+          <div
+            style={{
+              transform: "perspective(1000px) rotateX(15deg)",
+              transformStyle: "preserve-3d",
+            }}
+          >
+            <img
+              src="/logo.jpeg"
+              alt="Logo"
+              className="h-20 w-20 object-contain mb-3 rounded-full"
+              style={{
+                filter:
+                  "drop-shadow(0 20px 35px rgba(0,0,0,0.5)) drop-shadow(0 8px 20px rgba(212,175,55,0.7))",
+                boxShadow:
+                  "0 25px 50px rgba(0,0,0,0.4), 0 10px 20px rgba(212,175,55,0.3), inset 0 0 30px rgba(212,175,55,0.2)",
+                transform: "translateZ(50px)",
+              }}
+            />
+          </div>
+          <h1
+            className="text-2xl md:text-3xl font-bold mb-1"
+            style={{ color: "#D4AF37" }}
+          >
             विस्तारा प्रीमियम सोलर एजेंसी
           </h1>
-          <p className="text-sm md:text-base text-gray-600">
+          <p
+            className="text-base md:text-lg font-semibold"
+            style={{ color: "#D4AF37" }}
+          >
             Vistara Premium Solar Agency
           </p>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex justify-center md:hidden pb-4">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 bg-gray-100 p-2 rounded-lg"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex justify-center space-x-6 pb-6">
+        {/* Mobile & Desktop Menu */}
+        <div className="flex flex-col md:flex-row md:justify-center md:space-x-6 pb-6 space-y-3 md:space-y-0">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-blue-600 hover:text-blue-800 font-semibold text-lg"
+            className="w-full md:w-auto text-center py-3 md:py-0 text-blue-600 hover:text-blue-800 font-semibold text-base md:text-lg"
           >
             होम
           </button>
           <button
             onClick={() => scrollToSection("about")}
-            className="text-green-600 hover:text-green-800 font-semibold text-lg"
+            className="w-full md:w-auto text-center py-3 md:py-0 text-green-600 hover:text-green-800 font-semibold text-base md:text-lg"
           >
             हमारे बारे में
           </button>
 
-          <div className="relative group">
+          <button
+            onClick={() => scrollToSection("products")}
+            className="block md:hidden w-full text-center py-3 text-purple-600 hover:text-purple-800 font-semibold text-base"
+          >
+            उत्पाद
+          </button>
+
+          <div className="hidden md:block relative group">
             <button className="text-purple-600 hover:text-purple-800 font-semibold text-lg flex items-center">
               उत्पाद <ChevronDown className="ml-1 h-4 w-4" />
             </button>
@@ -114,66 +146,45 @@ export default function Navbar() {
 
           <button
             onClick={() => scrollToSection("franchise")}
-            className="text-red-600 hover:text-red-800 font-semibold text-lg"
+            className="w-full md:w-auto text-center py-3 md:py-0 text-red-600 hover:text-red-800 font-semibold text-base md:text-lg"
           >
             फ्रेंचाइजी
           </button>
           <button
             onClick={() => scrollToSection("why-solar")}
-            className="text-indigo-600 hover:text-indigo-800 font-semibold text-lg"
+            className="w-full md:w-auto text-center py-3 md:py-0 text-indigo-600 hover:text-indigo-800 font-semibold text-base md:text-lg"
           >
             सोलर बिजनेस क्यों
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="text-teal-600 hover:text-teal-800 font-semibold text-lg"
+            className="w-full md:w-auto text-center py-3 md:py-0 text-teal-600 hover:text-teal-800 font-semibold text-base md:text-lg"
           >
             संपर्क करें
           </button>
+          <button
+            onClick={() => scrollToSection("gallery")}
+            className="w-full md:w-auto text-center py-3 md:py-0 text-pink-600 hover:text-pink-800 font-semibold text-base md:text-lg"
+          >
+            गैलरी
+          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden pb-4 space-y-3">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="block w-full text-center py-3 text-blue-600 hover:bg-blue-50 font-semibold text-lg rounded"
-            >
-              होम
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="block w-full text-center py-3 text-green-600 hover:bg-green-50 font-semibold text-lg rounded"
-            >
-              हमारे बारे में
-            </button>
-            <button
-              onClick={() => scrollToSection("products")}
-              className="block w-full text-center py-3 text-purple-600 hover:bg-purple-50 font-semibold text-lg rounded"
-            >
-              उत्पाद
-            </button>
-            <button
-              onClick={() => scrollToSection("franchise")}
-              className="block w-full text-center py-3 text-red-600 hover:bg-red-50 font-semibold text-lg rounded"
-            >
-              फ्रेंचाइजी
-            </button>
-            <button
-              onClick={() => scrollToSection("why-solar")}
-              className="block w-full text-center py-3 text-indigo-600 hover:bg-indigo-50 font-semibold text-lg rounded"
-            >
-              सोलर बिजनेस क्यों
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-center py-3 text-teal-600 hover:bg-teal-50 font-semibold text-lg rounded"
-            >
-              संपर्क करें
-            </button>
-          </div>
-        )}
       </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.33%);
+          }
+        }
+        .animate-marquee {
+          display: inline-block;
+          animation: marquee 15s linear infinite;
+        }
+      `}</style>
     </nav>
   );
 }

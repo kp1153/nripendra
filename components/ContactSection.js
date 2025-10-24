@@ -1,5 +1,5 @@
 "use client";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -19,7 +19,9 @@ export default function ContactSection() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               संपर्क जानकारी
             </h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* पता */}
               <div className="flex items-start">
                 <div className="bg-orange-100 p-3 rounded-lg mr-4">
                   <MapPin className="h-6 w-6 text-orange-600" />
@@ -36,32 +38,43 @@ export default function ContactSection() {
                 </div>
               </div>
 
+              {/* फोन */}
               <div className="flex items-start">
                 <div className="bg-orange-100 p-3 rounded-lg mr-4">
                   <Phone className="h-6 w-6 text-orange-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">फोन</h4>
-                  <p className="text-gray-600">
-                    <a href="tel:+918787037469" className="hover:text-orange-600">
+                  <p className="text-gray-600 space-y-1">
+                    <a
+                      href="tel:+918787037469"
+                      className="hover:text-orange-600 block"
+                    >
                       +91 87870 37469
                     </a>
-                    <br />
-                    <a href="tel:+919452761759" className="hover:text-orange-600">
+                    <a
+                      href="tel:+919452761759"
+                      className="hover:text-orange-600 block"
+                    >
                       +91 94527 61759
                     </a>
-                    <br />
-                    <a href="tel:+919936379959" className="hover:text-orange-600">
+                    <a
+                      href="tel:+919936379959"
+                      className="hover:text-orange-600 block"
+                    >
                       +91 99363 79959
                     </a>
-                    <br />
-                    <a href="tel:+919452206759" className="hover:text-orange-600">
+                    <a
+                      href="tel:+919452206759"
+                      className="hover:text-orange-600 block"
+                    >
                       +91 94522 06759
                     </a>
                   </p>
                 </div>
               </div>
 
+              {/* ईमेल */}
               <div className="flex items-start">
                 <div className="bg-orange-100 p-3 rounded-lg mr-4">
                   <Mail className="h-6 w-6 text-orange-600" />
@@ -78,21 +91,10 @@ export default function ContactSection() {
                   </p>
                 </div>
               </div>
-
-              <div className="flex items-start">
-                <div className="bg-orange-100 p-3 rounded-lg mr-4">
-                  <Clock className="h-6 w-6 text-orange-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">कार्य समय</h4>
-                  <p className="text-gray-600">
-                    सोमवार - रविवार: 8:00 AM - 8:00 PM
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
+          {/* Google Map */}
           <div className="rounded-xl overflow-hidden shadow-lg h-96">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3607.3!2d82.89611!3d25.38833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDIzJzE3LjgiTiA4MsKwNTMnNDQuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
