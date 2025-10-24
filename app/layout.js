@@ -11,7 +11,7 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
 
 export const metadata = {
   title:
-    "विस्तार प्रीमियम सोलर एजेंसी - बनारस | APN Solar Master Premium Franchise",
+    "विस्तारा प्रीमियम सोलर एजेंसी - बनारस | APN Solar Master Premium Franchise",
   description:
     "बनारस और आसपास के क्षेत्रों में सोलर ऊर्जा समाधान। पीएम सूर्य घर मुफ्त बिजली योजना के अंतर्गत सोलर पैनल इंस्टालेशन। Master Premium Franchise अवसर उपलब्ध।",
   keywords:
