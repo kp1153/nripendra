@@ -180,11 +180,8 @@ export default function ProductsSection() {
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <a
-                    href="/documents/subsidy-details.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  {/* सुधार 1: 'विवरण देखें' के लिए नया फ़ाइल पाथ/नाम */}
+                  <a href="/1.jpg" target="_blank" rel="noopener noreferrer">
                     <Eye className="h-5 w-5 mr-2" />
                     विवरण देखें
                   </a>
@@ -195,7 +192,8 @@ export default function ProductsSection() {
                   variant="outline"
                   className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white/50"
                 >
-                  <a href="/documents/subsidy-details.pdf" download>
+                  {/* सुधार 2: 'डाउनलोड करें' के लिए नया फ़ाइल पाथ/नाम */}
+                  <a href="/1.jpg" download>
                     <Download className="h-5 w-5 mr-2" />
                     डाउनलोड करें
                   </a>
