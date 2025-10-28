@@ -1,0 +1,17 @@
+{
+  "copilot.mcpServers": [
+    {
+      "name": "Next.js MCP",
+      "url": "http://localhost:3000/.mcp"
+    }
+  ],
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/.next": true,
+    "**/node_modules": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.enable": true,
+  "eslint.packageManager": "npm"
+}
