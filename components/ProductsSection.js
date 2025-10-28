@@ -1,4 +1,5 @@
-"use client";
+"use client"; // क्लाइंट-साइड इंटरेक्शन (जैसे useState) के लिए जोड़ा गया
+
 import {
   Sun,
   Battery,
@@ -21,14 +22,13 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-// React state hook को इम्पोर्ट करें
-import React, { useState } from "react";
+import React, { useState } from "react"; // useState इम्पोर्ट किया गया
 
 export default function ProductsSection() {
   // सब्सिडी विवरण को दिखाने/छुपाने के लिए स्टेट
   const [showSubsidyDetails, setShowSubsidyDetails] = useState(false);
 
-  // 1.jpg इमेज से निकाली गई अनुदान तालिका का डेटा
+  // 1.jpeg/1.jpg इमेज से निकाली गई अनुदान तालिका का डेटा
   const subsidyData = [
     { capacity: "1KW", centre: "30000", state: "15000", total: "45000" },
     { capacity: "2KW", centre: "60000", state: "30000", total: "90000" },
@@ -42,7 +42,7 @@ export default function ProductsSection() {
     { capacity: "10KW", centre: "78000", state: "30000", total: "108000" },
   ];
 
-  // 1.jpg इमेज से निकाले गए मुख्य लाभ
+  // 1.jpeg/1.jpg इमेज से निकाले गए मुख्य लाभ
   const subsidyFeatures = [
     "सोलर मॉड्यूल की 25 वर्षों तक की परफॉरमेंस वारंटी",
     "ऑनग्रिड सोलर सिस्टम लगभग जीरो मेंटेनेंस खर्च",
@@ -204,7 +204,7 @@ export default function ProductsSection() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                {/* विवरण देखने/छुपाने के लिए बटन */}
+                {/* विवरण देखने/छुपाने के लिए बटन (Inline Logic) */}
                 <Button
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
@@ -213,14 +213,14 @@ export default function ProductsSection() {
                   <Eye className="h-5 w-5 mr-2" />
                   {showSubsidyDetails ? "विवरण छुपाएँ" : "विवरण देखें"}
                 </Button>
-                {/* इमेज फ़ाइल को सीधे देखने का विकल्प (पिछली 404 त्रुटि से बचने के लिए) */}
+                {/* मूल फ़ाइल देखें/डाउनलोड करें बटन - पाथ को 1.jpeg पर सेट किया गया */}
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
                   className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white/50"
                 >
-                  <a href="/1.jpg" target="_blank" rel="noopener noreferrer">
+                  <a href="/1.jpeg" target="_blank" rel="noopener noreferrer">
                     <Download className="h-5 w-5 mr-2" />
                     मूल फ़ाइल देखें
                   </a>
@@ -230,7 +230,7 @@ export default function ProductsSection() {
           </CardContent>
         </Card>
 
-        {/* 404 से बचने और जानकारी को कोड के माध्यम से दिखाने के लिए नया सेक्शन */}
+        {/* सब्सिडी विवरण सेक्शन (जो useState द्वारा दिखाया/छुपाया जाता है) */}
         {showSubsidyDetails && (
           <Card className="shadow-2xl mb-12 p-6 bg-white border border-orange-200 transition-all duration-300 ease-in-out">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 border-b pb-2">
