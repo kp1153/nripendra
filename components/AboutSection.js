@@ -29,6 +29,18 @@ export default function AboutSection() {
               रखने वाले उत्साही पेशेवरों की टीम द्वारा संचालित, हम एक हरित और
               अधिक टिकाऊ पृथ्वी बनाने के लिए समर्पित हैं।
             </p>
+            <p className="text-lg text-gray-700 mb-6">
+              विस्तारा प्रीमियम सोलर एजेंसी परिवार में आप सभी का हार्दिक स्वागत
+              एवं अभिनंदन है। आप विस्तारा प्रीमियम सोलर एजेंसी की छत के नीचे सौर
+              ऊर्जा से जुड़ी अपनी सभी आवश्यकताएँ बेहद किफायती, विश्वस्तरीय एवं
+              विश्वसनीय सोलर कंपनियों के उत्पादों के माध्यम से पूरी कर सकते हैं।
+              इन उत्पादों की सहायता से आप अपने बढ़ते हुए बिजली बिल के खर्च को
+              प्रभावी रूप से कम कर सकते हैं। विस्तारा प्रीमियम सोलर एजेंसी के
+              माध्यम से प्रधानमंत्री सूर्य घर मुफ्त बिजली योजना के अंतर्गत
+              ऑन-ग्रिड एवं ऑफ-ग्रिड सोलर सिस्टम, सोलर स्ट्रीट लाइट, सोलर वॉटर
+              हीटर, सोलर वॉटर पंप आदि उपलब्ध हैं। सौर ऊर्जा के क्षेत्र में
+              ए.पी.एन. प्राइवेट लिमिटेड एक प्रतिष्ठित एवं विश्वसनीय कंपनी है।
+            </p>
           </div>
 
           {/* Right Image */}
@@ -53,21 +65,27 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Shield className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h4 className="font-bold text-xl mb-2 text-blue-700">ISO Certified</h4>
+              <h4 className="font-bold text-xl mb-2 text-blue-700">
+                ISO Certified
+              </h4>
               <p className="text-blue-600 text-base font-semibold">
                 ISO 9001:2015, ISO 45001:2018, ISO 14001:2015
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Award className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h4 className="font-bold text-xl mb-2 text-blue-700">OEM Certified</h4>
+              <h4 className="font-bold text-xl mb-2 text-blue-700">
+                OEM Certified
+              </h4>
               <p className="text-blue-600 text-base font-semibold">
                 TUV-Rhineland & BIS Certified Manufacturer
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Award className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h4 className="font-bold text-xl mb-2 text-blue-700">पुरस्कार विजेता</h4>
+              <h4 className="font-bold text-xl mb-2 text-blue-700">
+                पुरस्कार विजेता
+              </h4>
               <p className="text-blue-600 text-base font-semibold">
                 भारत में पुरस्कार विजेता मान्यता
               </p>
