@@ -1,4 +1,3 @@
-// app/gallery/page.js
 "use client";
 import { useState, useEffect } from "react";
 import { Download, FileText, Award } from "lucide-react";
@@ -32,6 +31,16 @@ const images = [
   "/gallery/2.jpeg",
   "/gallery/3.jpeg",
   "/gallery/4.jpeg",
+];
+
+// Video is placed in the public folder — use public-root URL
+const videos = [
+  {
+    name: "APN",
+    nameHindi: "एपीएन वीडियो",
+    file: "/APN.mp4", // public-root URL for the video
+    type: "video",
+  },
 ];
 
 export default function GalleryPage() {
@@ -115,6 +124,69 @@ export default function GalleryPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t-2 border-orange-300 mb-16"></div>
+
+        {/* Video Section (APN) */}
+        <div className="mb-12">
+          <h2
+            className="text-3xl md:text-4xl font-bold text-center mb-2"
+            style={{ color: "#D4AF37" }}
+          >
+            वीडियो गैलरी
+          </h2>
+          <p className="text-center text-gray-600 mb-8">Videos</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {videos.map((vid, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-lg shadow-lg p-6 border-2 border-orange-200"
+              >
+                <h3 className="text-xl font-bold text-gray-800 text-center mb-2">
+                  {vid.nameHindi}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  {vid.name}
+                </p>
+
+                <div className="w-full aspect-video bg-black rounded-md overflow-hidden mb-4">
+                  <video
+                    controls
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                    src={vid.file}
+                  >
+                    <source src={vid.file} type="video/mp4" />
+                    आपका ब्राउज़र वीडियो टैग को सपोर्ट नहीं करता।
+                  </video>
+                </div>
+
+                <div className="flex gap-3">
+                  <a
+                    href={vid.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg text-center font-semibold transition-colors"
+                  >
+                    देखें
+                  </a>
+                  <button
+                    onClick={() => handleDownload(vid.file, vid.name)}
+                    className="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
