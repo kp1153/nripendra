@@ -69,7 +69,29 @@ export default function ContactSection() {
                   <MapPin className="h-6 w-6 text-orange-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">पहला पता</h4>
+                  <h4 className="font-semibold text-gray-800 mb-1">Main Branch - Mumbai</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    ग्लोबल सिटी, विरार वेस्ट
+                    <br />
+                    मुंबई, महाराष्ट्र
+                  </p>
+                  <a
+                    href="tel:+919011151134"
+                    className="block text-sm text-orange-600 hover:text-orange-700 mt-2 font-medium"
+                  >
+                    📞 +91 90111 51134
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-br from-orange-100 to-orange-50 p-3 rounded-xl flex-shrink-0">
+                  <MapPin className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-1">
+                    State Branch - Varanasi
+                  </h4>
                   <p className="text-gray-700 leading-relaxed">
                     NH-56, बाबतपुर एयरपोर्ट रोड
                     <br />
@@ -86,7 +108,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">
-                    दूसरा पता
+                    State Branch - Varanasi
                   </h4>
                   <p className="text-gray-700 leading-relaxed">
                     NH-56, बाबतपुर एयरपोर्ट रोड
